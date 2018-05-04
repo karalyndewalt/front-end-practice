@@ -1,0 +1,50 @@
+
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>title</title>
+      <style>
+      #LeftCol {
+        width: 40%;
+        padding: 1%;
+        margin: 1%;
+        display: inline-block;
+      }
+
+      #RightCol {
+        width: 40%;
+        padding: 1%;
+        margin: 1%;
+        display: inline-block;
+        border-style: solid;
+      }
+      </style>
+      <script>
+        function buttonClick(value) {
+        		var textID = value
+            console.log(textID)
+            var textBox = document.getElementById(textID)
+            if (textBox.hidden === true) {
+            	textBox.hidden = false
+            }
+            else {
+            	textBox.hidden = true
+            }
+        }
+      </script>
+    </head>
+    <body>
+      <span>
+        <div id='LeftCol'>
+          <button id='button1' onclick="buttonClick(this.value)" value='text1'>1</button>
+          <button id='button2' onclick="buttonClick(this.value)" value='text2'>2</button>
+          <button id='button3' onclick="buttonClick(this.value)" value='text3'>3</button>
+        </div>
+        <div id="RightCol">
+          <div id='text1'>Text 1</div>
+          <div id='text2'>Text 2</div>
+          <div id='text3'>Text 3</div>
+        </div>
+      </span>
+    </body>
+  </html>
